@@ -1,0 +1,60 @@
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const app = express();
+const mongoose = require('mongoose');
+
+async function main() {
+  try {
+    await mongoose.connect('mongodb://localhost:27017/contactForIdea');
+
+    console.log('Connected to MongoDB');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+  }
+}
+
+main(); // Call the main function to establish the MongoDB connection
+
+const port = 80;
+const contactSchema = new mongoose.Schema({
+  FullName: String,
+  Phonenmbr: String,
+  Email: String,
+  Address: String,
+  Message: String,
+});
+
+const contact = mongoose.model('contact', contactSchema);
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.post('/', (req, res) => {
+  console.log('Received data:', req.body);
+
+  var myData = new contact(req.body);
+  myData
+    .save()
+    .then(() => {
+      console.log('Data saved successfully');
+      res.send('This item has been saved to the database');
+    })
+    .catch((error) => {
+      console.error('Error saving data to database:', error);
+      res.status(400).send('Item was not saved');
+    });
+});
+
+app.listen(port, () => {
+  console.log(`The application started successfully on port ${port}`);
+});
+
+  
+
+
+
