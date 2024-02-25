@@ -12,6 +12,10 @@ body {
   position: relative;
 }
 
+.whatsapp-nm a {
+  cursor: pointer;
+}
+
 h1 {
   font-family: grifter;
 }

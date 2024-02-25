@@ -16,7 +16,7 @@ async function main() {
 
 main(); // Call the main function to establish the MongoDB connection
 
-const port = 80;
+const port = 8000;
 const contactSchema = new mongoose.Schema({
   FullName: String,
   Phonenmbr: String,
@@ -27,10 +27,11 @@ const contactSchema = new mongoose.Schema({
 
 const contact = mongoose.model('contact', contactSchema);
 
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
@@ -53,6 +54,8 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
 });
+
+
 
   
 

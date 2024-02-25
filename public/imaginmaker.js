@@ -1,26 +1,5 @@
 
-function submitForm() {
-  const form = document.getElementsByClassName('main-form')[0]; // Assuming there's only one element with the class 'contactForm'
-  const formData = new FormData(form);
 
-  fetch('/', {
-    method: 'POST',
-    body: formData,
-  })
-  .then(response => response.text())
-  .then(message => {
-    console.log(message); // Log the message received from the server
-
-    // Handle the message as needed, e.g., display it on the page
-    const resultElements = document.getElementsByClassName('result');
-    if (resultElements.length > 0) {
-      resultElements[0].innerText = message;
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-}
 
 // sliders
 let currentIndex = 0;
@@ -127,13 +106,69 @@ function startCounter() {
   }, 20 * (index + 1))
 })}
 window.onload = startCounter();
+// open wp chat
+document.addEventListener('DOMContentLoaded', function () {
+  const whatsappLinks = document.querySelectorAll('.whatsapp-nm a');
+
+  whatsappLinks.forEach(link => {
+      link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const phoneNumber = this.getAttribute('href').replace('https://wa.me/', '');
+          openWhatsApp(phoneNumber);
+      });
+  });
+});
+
+function openWhatsApp(phoneNumber) {
+  const whatsappURL = `https://wa.me/${phoneNumber}`;
+  window.open(whatsappURL, '_blank');
+}
+// for submition form
+// frontend.js
+function submitForm() {
+  const form = document.getElementsByClassName('main-form')[0];
+  const formData = new FormData(form);
+
+  fetch('/', {
+      method: 'POST',
+      body: formData,
+  })
+  .then(response => response.text())
+  .then(message => {
+      console.log(message);
+
+      // Handle the message as needed, e.g., display it on the page
+      const resultElements = document.getElementsByClassName('result');
+      if (resultElements.length > 0) {
+          resultElements[0].innerText = message;
+      }
+
+      // Clear the form after successful submission
+      // clearForm(form);
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
+
+// function clearForm(form) {
+//   // Set input values to an empty string
+//   const inputs = form.querySelectorAll('input, textarea');
+//   inputs.forEach(input => {
+//       input.value = '';
+//   });
+
+  // Reset the form's innerHTML
+  // form.innerHTML = form.innerHTML;
+// }
+vv
 // input phone Number
 function Phonenmbrformat(input) {
   var Phonenmbr = input.value.replace(/\D/g, '');
   if (Phonenmbr.length === 11) {
-    Phonenmbr = Phonenmbr.replace(/(\d{4})(\d{7})/, '$1-$2');
+      Phonenmbr = Phonenmbr.replace(/(\d{4})(\d{7})/, '$1-$2');
   } else if (Phonenmbr.length > 11) {
-    Phonenmbr = Phonenmbr.slice(0, 11);
+      Phonenmbr = Phonenmbr.slice(0, 11);
   }
   input.value = Phonenmbr;
 }
