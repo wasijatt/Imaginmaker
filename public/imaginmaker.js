@@ -161,7 +161,7 @@ function submitForm() {
   // Reset the form's innerHTML
   // form.innerHTML = form.innerHTML;
 // }
-vv
+
 // input phone Number
 function Phonenmbrformat(input) {
   var Phonenmbr = input.value.replace(/\D/g, '');

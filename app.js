@@ -8,9 +8,9 @@ async function main() {
   try {
     await mongoose.connect('mongodb://localhost:27017/contactForIdea');
 
-    console.log('Connected to MongoDB');
+
   } catch (error) {
-    console.error('Error connecting to MongoDB:', error);
+    // console.error('Error connecting to MongoDB:', error);
   }
 }
 
@@ -34,6 +34,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+app.get('/Weblog', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'Weblog.html'));
+});
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'services.html'));
+});
+app.get('/Our-values', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'Our Values.html'));
+});
+app.get('/Case-study', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'case-study.html'));
+});
 
 app.post('/', (req, res) => {
   console.log('Received data:', req.body);
@@ -51,9 +63,8 @@ app.post('/', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-  console.log(`The application started successfully on port ${port}`);
-});
+app.listen(8080, () => {});
+
 
 
 
