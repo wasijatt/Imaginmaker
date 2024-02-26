@@ -1,47 +1,85 @@
 
 
 
-// sliders
-let currentIndex = 0;
+// main sliders
 
-function showSlide(index) {
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.carousel-slide');
-  const slideWidth = slides[0].clientWidth;
+const slider = document.querySelector('.carousel-track');
+const navigation = document.querySelector('.navigation');
+const slides = document.querySelectorAll('.carousel-slide');
+const numSlides = slides.length;
+let currentIndex = 1;
 
-  currentIndex = index;
+let index = currentIndex;
 
-  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
-
-function handleMouseWheel(event) {
-  event.preventDefault();
-  const delta = Math.max(-1, Math.min(1, event.deltaY));
-
-  if (delta < 0) {
-    nextSlide();
-  } else {
-    prevSlide();
-  }
-}
+slider.style.transform = `translateX(-${index * 23}%)`;
 
 function nextSlide() {
-  const slides = document.querySelectorAll('.carousel-slide');
-  currentIndex = (currentIndex + 4) % slides.length;
-  showSlide(currentIndex);
+  index = (index + 1) % numSlides;
+  updateSlider();
 }
 
 function prevSlide() {
-  const slides = document.querySelectorAll('.carousel-slide');
-  currentIndex = (currentIndex - 4 + slides.length) % slides.length;
-  showSlide(currentIndex);
+  index = (index - 1 + numSlides) % numSlides;
+  updateSlider();
 }
 
-function prevSlide() {
-  const slides = document.querySelectorAll('.carousel-slide');
-  currentIndex = (currentIndex - 4 + slides.length) % slides.length;
-  showSlide(currentIndex);
+function updateSlider() {
+  slider.style.transform = `translateX(-${index * 23}%)`;
 }
+const intervalDuration = 3000; 
+let intervalId;
+
+function startAutoLoop() {
+  intervalId = setInterval(() => {
+    nextSlide();
+  }, intervalDuration);
+}
+
+function stopAutoLoop() {
+  clearInterval(intervalId);
+}
+
+
+startAutoLoop();
+navigation.addEventListener('mouseenter', stopAutoLoop);
+navigation.addEventListener('mouseleave', startAutoLoop);
+
+
+// clien reviews slider
+const reviewS = document.querySelector("slider");
+const reviewSlide = document.querySelectorAll("slide");
+const nmbrofSlides = reviewSlide.length 
+ let ReviewcurrentIndex=  1
+ let   Reviewindex = ReviewcurrentIndex ;
+ reviewS.style.transform = `translateX(-${Reviewindex * 394}px)`;
+ function nextreview(){
+  Reviewindex  = (Reviewindex +1) % nmbrofSlides
+  updateReview();
+
+ }
+ function prevreview(){
+   Reviewindex = ((Reviewindex -1 + nmbrofSlides) % nmbrofSlides)
+  updateReview();
+  
+ }
+function updateReview(){
+  reviewS.style.transform = `translateX(-${Reviewindex * 394}px)`;
+}
+let ReviewId;
+let reviewDuration = 3000;
+function startreviewLoop(){
+ReviewId = setInterval(() => {
+  nextreview();
+}, reviewDuration);
+}
+function stopReviewLoop() {
+  clearInterval(ReviewId);
+}
+startreviewLoop();
+reviewS.addEventListener('mouseenter', startreviewLoop);
+reviewS.addEventListener('mouseleave', stopReviewLoop);
+
+
 
 // mouseevents
 var cursor = document.querySelector(".cursor");
