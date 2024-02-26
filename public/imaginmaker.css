@@ -101,7 +101,7 @@ p {
   font-size: 60px;
   z-index: 100;
   font-family: grifter;
-text-align: start;
+  text-align: start;
 
 }
 
@@ -111,7 +111,7 @@ text-align: start;
   font-size: 22px;
   margin-top: -30px;
   margin-bottom: 40px;
-text-align: start;
+  text-align: start;
 }
 
 /* hero section button */
@@ -136,14 +136,15 @@ text-align: start;
   justify-content: center;
   align-items: center;
   top: 20px;
- margin-bottom: 40px;
+  margin-bottom: 40px;
 
 }
-.childone{
-display: flex;
-color: white ;
-font-size: 14px;
-margin: 4px;
+
+.childone {
+  display: flex;
+  color: white;
+  font-size: 14px;
+  margin: 4px;
 
 
 }
@@ -161,8 +162,9 @@ margin: 4px;
   padding-top: 50px;
   padding-bottom: 70px;
 }
-.carousel-container img{
-  border-radius: 20px ;
+
+.carousel-container img {
+  border-radius: 20px;
 }
 
 .carousel-track {
@@ -211,11 +213,11 @@ margin: 4px;
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 
   100% {
-      transform: translateX(calc(-250px *9));
+    transform: translateX(calc(-250px *9));
   }
 }
 
@@ -252,10 +254,12 @@ margin: 4px;
   width: 45%;
   padding-left: 8%;
 }
+
 .forth-h-first {
   color: white;
   font-size: 30px;
 }
+
 .getintouch-container {
   text-align: center;
   width: 55%;
@@ -272,7 +276,7 @@ margin: 4px;
   direction: row;
   /* justify-content: center; */
   align-items: center;
-  margin-top: 3vh; 
+  margin-top: 3vh;
 }
 
 .inner-container h1 {
@@ -302,10 +306,11 @@ margin: 4px;
   margin: auto;
   display: flex;
   z-index: 999;
-   position: fixed; 
-   margin-left: 29% ;
-   bottom: 100px;
+  position: fixed;
+  margin-left: 29%;
+  bottom: 100px;
 }
+
 /* .carousal-nav:hover{
   background: #000;
   transition: .5s ease-out;
@@ -331,7 +336,8 @@ margin: 4px;
   padding: 0px 9px;
   z-index: 100;
 }
-#section1{
+
+#section1 {
   transition: 2s ease-in-out;
 }
 
@@ -397,6 +403,7 @@ margin: 4px;
 .servis-img {
   width: 100%;
   height: 100%;
+  display: inline-block;
 }
 
 .services {
@@ -453,6 +460,7 @@ margin: 4px;
   align-items: end;
   justify-content: center;
 }
+
 .mob-nav {
   height: 3px;
   width: 26px;
@@ -461,9 +469,11 @@ margin: 4px;
   top: 13px;
   border-radius: 148px;
 }
+
 .mobile-logo {
   display: none;
 }
+
 .membership-divs {
   width: 27%;
 }
@@ -599,8 +609,8 @@ margin: 4px;
 .clintage-card h1 {
   font-size: 25px;
   font-weight: 600;
- 
-  color:#7700ff;
+
+  color: #7700ff;
 
 }
 
@@ -713,18 +723,22 @@ textarea {
   display: none;
 
 }
-.faq-para{
+
+.faq-para {
   transition: 3s ease-in-out;
- animation: fade-in-out;
+  animation: fade-in-out;
 }
-@keyframes fade-in-out{
-  0%{
+
+@keyframes fade-in-out {
+  0% {
     opacity: 0;
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
+
 .main-heading-case-study {
   color: #ffffff;
   font-size: 40px;
@@ -842,7 +856,8 @@ textarea {
   padding: 5%;
   margin: auto;
 }
-.width{
+
+.width {
   width: 300px;
 }
 
@@ -853,7 +868,7 @@ textarea {
 
 
 
-.animation-container-1{
+.animation-container-1 {
   width: 300px;
   height: 300px;
   background: #000;
@@ -899,42 +914,50 @@ textarea {
   font-size: 54px;
   margin-left: 30%;
 }
+
 .mobile-svg {
   display: none;
 }
+
 .graphic-tab {
-  width:  90%;
+  width: 90%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 #lottie-container {
   width: 100px;
   height: 100px;
 }
 
-.graphic-tab-col{
+.graphic-tab-col {
   width: 20%;
   /* background-color: #d3d3d3; */
   margin: 1.5rem;
-  
+
 }
-.tab-element{
+
+.tab-element {
   margin-top: 3rem;
 }
+
 .tab-element img {
   width: 100%;
   border-radius: 15px;
 }
-.tab-element h1{
-  margin-top: -5px ;
+
+.tab-element h1 {
+  margin-top: -5px;
 }
-.tab-element p{
-  margin-top: -15px ;
+
+.tab-element p {
+  margin-top: -15px;
 
 }
-.model{
+
+.model {
   position: fixed;
   top: 0;
   left: 0;
@@ -944,7 +967,8 @@ textarea {
   background: #333;
   z-index: 1;
 }
-.model-div{
+
+.model-div {
   width: 70%;
   height: 70vh;
   margin: auto;
@@ -952,9 +976,10 @@ textarea {
   position: relative;
 
 }
-.prev .next{
+
+.prev .next {
   top: 50%;
-  font-size: 30px ;
+  font-size: 30px;
   color: white;
   position: absolute;
 }
@@ -970,6 +995,7 @@ textarea {
 
     /* top: 15; */
   }
+
   .mobile-logo {
     display: block;
     top: 10;
@@ -981,20 +1007,26 @@ textarea {
   }
 
   .main-heading {
-    font-size: 30px;
+    font-size: 58px;
     text-align: center;
-    line-height: 1.4;
-    margin-top: 40px;
+    line-height: 1.30;
+    margin-top: 70px;
   }
 
   .main-para {
-    font-size: 18px;
+    font-size: 23px;
     text-align: center;
+    margin-top: -56px;
+    margin-bottom: -19px;
+    padding: 46px;
+    line-height: 34px;
   }
+
 
   .carousal {
     display: none;
   }
+
   .form-button {
     padding: 8px 14px;
     font-size: 10px;
@@ -1027,111 +1059,185 @@ textarea {
     width: 100%;
     padding: 0;
   }
+
   .inner-container {
     padding-left: 1rem;
   }
+
   .inner-container h1 {
     font-size: 13px;
     letter-spacing: 0;
   }
+
   .last-para {
     text-align: center;
   }
+
   .getintouch-container {
     width: 100%;
   }
+
   .plan-link {
     font-size: 12px;
     padding: 8px 18px;
   }
-  .services-container h1 {
-    font-size: 25px;
-  }
+
+  
   .services-container {
-    padding: 5% 8%;
+    padding: 11% 8%;
+    height: 761px;
+    position: absolute;
   }
+  .services-container h1 {
+    font-size: 36px;
+    top: 20px;
+  }
+
+  #graphic {
+    position: relative;
+    top: 23px;
+    left: 92px;
+  }
+
+  #motion {
+    position: relative;
+    top: -150px;
+    left: -80px;
+  }
+
+  #ui-ux {
+    position: relative;
+    top: 28px;
+    left: -80px;
+  }
+
+  #web-design {
+    position: relative;
+    top: -330px;
+    left: -80px;
+  }
+
+  #illustration {
+    position: relative;
+    top: -515px;
+    left: 92px;
+  }
+  #branding {
+    position: relative;
+    top: -519px;
+    left: 180px;
+  }
+
+
+
   .service-done {
-    margin-top: 9px;
+    margin-top: -314px;
+    left: -85px;
+    position: relative;
     font-size: 10px;
     padding: 9px 13px;
-  }
+}
+
   .six-con-heading-sec h1 {
     font-size: 30px;
   }
+
   .six-con-heading-sec p {
     font-size: 15px;
     margin-top: -10px;
   }
+
   .servis-con {
     width: 42%;
     margin: 14px;
   }
+
   .svg-member {
     display: none;
   }
+
   .membership-divs {
     width: 42%;
     margin: 5px;
   }
+
   .membership-divs p {
     font-size: 10px;
   }
+
   .membership-divs h1 {
     font-size: 14px;
     font-family: sf ui display;
   }
+
   .plans {
     flex-wrap: wrap;
     width: 100%;
   }
+
   .membership-plan {
     width: 40%;
     margin: 1.1rem;
   }
+
   .mem-headings {
     font-size: 19px;
   }
+
   #mem-plan-p {
     font-size: 10px;
   }
+
   .mem-price-headings {
     font-size: 23px;
   }
+
   #mem-price-p {
     font-size: 10px;
   }
+
   .first-child {
     top: 50px;
   }
+
   .plans li {
     list-style: none;
     font-size: 10px;
   }
+
   .cal-book {
     display: flex;
   }
+
   .first-svg {
     width: 60%;
   }
+
   .second-svg {
     width: 40%;
   }
+
   .para-call {
     font-size: 10px;
   }
+
   .mobile-svg {
     display: block;
   }
+
   .pc-svg {
     display: none;
   }
+
   .eight-con {
     width: 100%;
   }
+
   .eight-con-head {
     font-size: 15px;
     width: 70%;
   }
+
   .eight-two {
     width: 30%;
   }
