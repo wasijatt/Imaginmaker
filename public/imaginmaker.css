@@ -12,6 +12,13 @@ body {
   position: relative;
 }
 
+
+.mobile-main-heading { 
+   display: none; 
+ }
+ .mobile-forth-h-first{
+  display: none;
+ }
 .whatsapp-nm a {
   cursor: pointer;
 }
@@ -105,6 +112,7 @@ p {
 
 }
 
+
 /* hero scetion main paragragh */
 .main-para {
   color: #ffffff;
@@ -148,37 +156,41 @@ p {
 
 
 }
-.navigation{
+
+.navigation {
   display: flex;
   background: #7700ff;
   padding: 50px;
 
 }
 
-.navigator{
+.navigator {
   top: 45%;
   border-radius: 70px;
   margin-right: 10px;
   outline: none;
   border: none;
 }
-.navigator img{
+
+.navigator img {
   width: 50px;
   height: 50px;
 }
-.next{
+
+.next {
   margin-left: 10px;
 }
-.prev{
+
+.prev {
   margin-right: 30px;
 }
+
 .carousal {
   position: relative;
   overflow: hidden;
   background: #7700ff;
 }
 
-<<<<<<< HEAD
 .carousel-container {
   width: 100%;
   margin: auto;
@@ -191,20 +203,19 @@ p {
 
 .carousel-container img {
   border-radius: 20px;
-=======
+}
 
-.carousel-slide img{
-  border-radius: 20px ;
+.carousel-slide img {
+  border-radius: 20px;
   width: 325px;
   height: 325px;
->>>>>>> a3ace535470bf395310a35738a1b02591a36805e
 }
 
 .carousel-track {
   display: flex;
- 
+
   transition: transform 1s ease-in-out;
-  width:100%;
+  width: 100%;
   /* overflow: hidden; */
   margin: auto;
 }
@@ -212,10 +223,11 @@ p {
 .carousel-slide {
   min-width: 20%;
   box-sizing: border-box;
- margin-right: 3%;
+  margin-right: 3%;
 
   justify-content: space-between;
 }
+
 .carousel-button {
   position: fixed;
   top: 50%;
@@ -298,6 +310,7 @@ p {
 .forth-h-first {
   color: white;
   font-size: 30px;
+
 }
 
 .getintouch-container {
@@ -331,16 +344,19 @@ p {
   color: white;
   font-size: 25px;
 }
-.sl{
+
+.sl {
   position: relative;
   overflow: hidden;
 }
-.slider{
+
+.slider {
   display: flex;
   width: 394px;
   transition: 1s ease-in-out;
-  margin:auto;
+  margin: auto;
 }
+
 .slide {
 
   margin-bottom: 40px;
@@ -1035,11 +1051,112 @@ textarea {
   color: white;
   position: absolute;
 }
-
-@media screen and (min-width: 400px) and (max-width: 600px) {
+/* first section responsive code with width of 320 to 420 */
+@media screen and (min-width: 320px) and (max-width: 415px) {
   .buton {
     display: none;
   }
+
+  .logo {
+    display: block;
+  }
+  
+  .middle-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    float: right;
+
+    /* top: 15; */
+  }
+  .carousal-nav{
+    display: none;
+  }
+   .main-heading { 
+    display: none;
+  } 
+   .mobile-main-heading { 
+    display: block;
+    position: relative;
+    top: 30px;
+    color: #ffffff;
+    line-height: 1.1;
+    font-size: 41px;
+    z-index: 100;
+    font-family: grifter;
+    text-align: center;
+  } 
+  .main-para {
+    position: relative;
+    top: -4px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 11px;
+    margin-bottom: -19px;
+    padding: 30px 23px 23px 11px;
+    line-height: 27px;
+}
+.plan-link {
+  font-size: 12px;
+  padding: 8px 18px;
+  position: relative;
+  top: 9px;
+}
+.forth-h-first {
+    display: none;
+    color: white;
+    font-size: 31px;
+}
+
+}
+@media screen and (min-width: 415px) and (max-width: 520px) {
+
+   .main-heading { 
+    display: none;
+  } 
+   .mobile-main-heading { 
+    display: block;
+    position: relative;
+    top: 30px;
+    color: #ffffff;
+    line-height: 1.1;
+    font-size: 41px;
+    z-index: 100;
+    font-family: grifter;
+    text-align: center;
+  } 
+  .main-para {
+    position: relative;
+    top: -4px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 11px;
+    margin-bottom: -19px;
+    padding: 30px 23px 23px 11px;
+    line-height: 27px;
+}
+.plan-link {
+  font-size: 12px;
+  padding: 8px 18px;
+  position: relative;
+  top: 9px;
+}
+
+.forth-container {
+  width: 95%;
+  border-radius: 18px;
+  padding: 4px;
+  flex-direction: column;
+}
+  .buton {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
 
   .mobile-nav {
     display: block;
@@ -1048,15 +1165,17 @@ textarea {
     /* top: 15; */
   }
 
+
   .mobile-logo {
     display: block;
     top: 10;
-    margin-left: 8%;
+    margin-left: 50px;
   }
 
   .middle-nav {
     display: none;
   }
+
 
   .main-heading {
     font-size: 58px;
@@ -1067,13 +1186,14 @@ textarea {
 
   .main-para {
     font-size: 23px;
+    position: relative;
     text-align: center;
-    margin-top: -56px;
+    top: 4px;
+    margin-top: -5px;
     margin-bottom: -19px;
-    padding: 46px;
+    padding: 136px -20px 39px 51px;
     line-height: 34px;
-  }
-
+}
 
   .carousal {
     display: none;
@@ -1101,8 +1221,9 @@ textarea {
     flex-direction: column;
   }
 
-  .forth-h-first {
-    width: 100%;
+  .mobile-forth-h-first h1 {
+    display: block;
+    /* width: 100%; */
     font-size: 23px;
     text-align: center;
   }
@@ -1132,14 +1253,29 @@ textarea {
   .plan-link {
     font-size: 12px;
     padding: 8px 18px;
-  }
+    position: relative;
+    top: 11px;
+    left: -10px;
+}
+.childone {
+  display: flex;
+  color: white;
+  font-size: 14px;
+  margin: 2px 1px;
+  position: relative;
+  left: -18px;
+}
+.carousal-nav{
+  display: none;
+}
 
-  
+
   .services-container {
     padding: 11% 8%;
     height: 761px;
     position: absolute;
   }
+
   .services-container h1 {
     font-size: 36px;
     top: 20px;
@@ -1174,6 +1310,7 @@ textarea {
     top: -515px;
     left: 92px;
   }
+
   #branding {
     position: relative;
     top: -519px;
@@ -1188,7 +1325,7 @@ textarea {
     position: relative;
     font-size: 10px;
     padding: 9px 13px;
-}
+  }
 
   .six-con-heading-sec h1 {
     font-size: 30px;
