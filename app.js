@@ -16,7 +16,7 @@ async function main() {
 
 main(); // Call the main function to establish the MongoDB connection
 
-const port = 8000;
+
 const contactSchema = new mongoose.Schema({
   FullName: String,
   Phonenmbr: String,
