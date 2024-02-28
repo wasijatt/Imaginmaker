@@ -1,5 +1,5 @@
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 // main sliders
 
@@ -144,23 +144,7 @@ function startCounter() {
   }, 20 * (index + 1))
 })}
 window.onload = startCounter();
-// open wp chat
-document.addEventListener('DOMContentLoaded', function () {
-  const whatsappLinks = document.querySelectorAll('.whatsapp-nm a');
 
-  whatsappLinks.forEach(link => {
-      link.addEventListener('click', function (event) {
-          event.preventDefault();
-          const phoneNumber = this.getAttribute('href').replace('https://wa.me/', '');
-          openWhatsApp(phoneNumber);
-      });
-  });
-});
-
-function openWhatsApp(phoneNumber) {
-  const whatsappURL = `https://wa.me/${phoneNumber}`;
-  window.open(whatsappURL, '_blank');
-}
 // for submition form
 // frontend.js
 function submitForm() {
@@ -360,3 +344,6 @@ function mouseOut() {
 
   document.getElementById("carisal-nav").style.transition = ".5s ease-out";
 }
+
+
+
