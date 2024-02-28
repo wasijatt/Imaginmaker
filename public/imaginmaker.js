@@ -1,5 +1,5 @@
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 // main sliders
 
@@ -344,3 +344,6 @@ function mouseOut() {
 
   document.getElementById("carisal-nav").style.transition = ".5s ease-out";
 }
+
+
+

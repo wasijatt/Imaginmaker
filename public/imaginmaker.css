@@ -856,6 +856,8 @@ textarea {
 }
 .footer-col:first-child{
   flex: 60%;
+  position: relative;
+  
 }
 .footer-col:first-child p{
   color: #FFFFFF;
@@ -865,6 +867,23 @@ textarea {
 .whatsap{
   color: #9A9A9A;
 
+}
+.term{
+  display: flex;
+position: absolute;
+bottom: 0;
+}
+.copyright{
+  color: #9A9A9A;
+  font-size: 25px;
+  font-weight: 300;
+}
+.f-links a{
+  color: #c8c7c7;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 20px;
 }
 .socialmedia {
   margin-top: -8px;
