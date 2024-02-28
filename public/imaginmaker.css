@@ -13,12 +13,14 @@ body {
 }
 
 
-.mobile-main-heading { 
-   display: none; 
- }
- .mobile-forth-h-first{
+.mobile-main-heading {
   display: none;
- }
+}
+
+.mobile-forth-h-first {
+  display: none;
+}
+
 .whatsapp-nm a {
   cursor: pointer;
 }
@@ -312,6 +314,12 @@ p {
   color: white;
   font-size: 30px;
 
+}
+
+.mobile-forth-h-first {
+  display: none;
+  color: white;
+  font-size: 31px;
 }
 
 .getintouch-container {
@@ -648,7 +656,7 @@ p {
 }
 
 .nine-con {
-    background: #181818;
+  background: #181818;
   padding: 5% 10%;
   text-align: center;
   align-items: center;
@@ -839,7 +847,7 @@ textarea {
 }
 
 .footer-bg {
-    background: #181818;
+  background: #181818;
 }
 
 .footer {
@@ -940,7 +948,7 @@ textarea {
 .animation-container-1 {
   width: 300px;
   height: 300px;
-    background: #181818;
+  background: #181818;
 }
 
 .content-card-button {
@@ -1052,32 +1060,39 @@ textarea {
   color: white;
   position: absolute;
 }
+
 /* first section responsive code with width of 320 to 420 */
 @media screen and (min-width: 320px) and (max-width: 415px) {
+
+  /* first section */
   .buton {
     display: none;
   }
 
   .logo {
-    display: block;
+    display: none;
   }
-  
+
   .middle-nav {
     display: none;
   }
+
   .mobile-nav {
     display: block;
     float: right;
 
     /* top: 15; */
   }
-  .carousal-nav{
+
+  .carousal-nav {
     display: none;
   }
-   .main-heading { 
+
+  .main-heading {
     display: none;
-  } 
-   .mobile-main-heading { 
+  }
+
+  .mobile-main-heading {
     display: block;
     position: relative;
     top: 30px;
@@ -1087,7 +1102,8 @@ textarea {
     z-index: 100;
     font-family: grifter;
     text-align: center;
-  } 
+  }
+
   .main-para {
     position: relative;
     top: -4px;
@@ -1097,75 +1113,108 @@ textarea {
     margin-bottom: -19px;
     padding: 30px 23px 23px 11px;
     line-height: 27px;
-}
-.plan-link {
-  font-size: 12px;
-  padding: 8px 18px;
-  position: relative;
-  top: 9px;
-}
-.forth-h-first {
-    display: none;
+  }
+
+  .plan-link {
+    font-size: 12px;
+    padding: 8px 18px;
+    position: relative;
+    top: 9px;
+  }
+
+  /* forth container */
+  .forth-h-first {
+    display: block;
     color: white;
     font-size: 31px;
-}
+  }
 
+  /* services container */
+.services-container {
+    background: #181818;
+    padding: 39% 93% -9px;
+    width: 403px;
+    height: 684px;
 }
-@media screen and (min-width: 415px) and (max-width: 520px) {
-
-   .main-heading { 
-    display: none;
-  } 
-   .mobile-main-heading { 
-    display: block;
+  .services-container h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
     position: relative;
-    top: 30px;
-    color: #ffffff;
-    line-height: 1.1;
-    font-size: 41px;
+    top: 7px;
+    left: -5px;
     z-index: 100;
-    font-family: grifter;
-    text-align: center;
-  } 
-  .main-para {
+    font-weight: 700;
+    color: white;
+}
+
+.servis-con {
     position: relative;
-    top: -4px;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 11px;
-    margin-bottom: -19px;
-    padding: 30px 23px 23px 11px;
-    line-height: 27px;
-}
-.plan-link {
-  font-size: 12px;
-  padding: 8px 18px;
-  position: relative;
-  top: 9px;
+    top: -56px;
+    left: 125px;
+    width: 130px;
 }
 
-.forth-container {
-  width: 95%;
-  border-radius: 18px;
-  padding: 4px;
-  flex-direction: column;
+#graphic {
+    position: relative;
+    top: 366px;
+    left: -6px;
 }
-  .buton {
+
+#motion {
+    position: relative;
+    top: 363px;
+    left: 24px;
+}
+
+#ui-ux {
+    position: relative;
+    top: -106px;
+    left: -5px;
+}
+
+#web-design {
+    position: relative;
+    top: 48px;
+    left: -140px;
+}
+
+#illustration {
+    position: relative;
+    top: -96px;
+    left: 159px;
+}
+#branding {
+    position: relative;
+    top: -253px;
+    left: 23px;
+}
+
+.service-done {
+    top: 70px;
+    left: -1px;
+    width: 117px;
+    height: 36px;
+    position: relative;
+    font-size: 10px;
+    padding: 9px 13px;
+}
+  
+}
+
+ @media screen and (min-width: 415px) and (max-width: 520px) {
+
+  /* same css  */
+  .middle-nav {
     display: none;
   }
-
-  .logo {
-    display: none;
-  }
-
 
   .mobile-nav {
     display: block;
     float: right;
-
-    /* top: 15; */
+    position: relative;
+    left: -39px;
   }
-
 
   .mobile-logo {
     display: block;
@@ -1173,9 +1222,156 @@ textarea {
     margin-left: 50px;
   }
 
-  .middle-nav {
+  .logo {
     display: none;
   }
+
+  .buton {
+    display: none;
+  }
+
+  /* first section */
+  .main-heading {
+    display: none;
+  }
+
+  .mobile-main-heading {
+    display: block;
+    position: relative;
+    top: 30px;
+    color: #ffffff;
+    line-height: 1.1;
+    font-size: 41px;
+    z-index: 100;
+    font-family: grifter;
+    text-align: center;
+  }
+
+  .main-para {
+    position: relative;
+    top: -4px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 11px;
+    margin-bottom: -19px;
+    padding: 30px 23px 23px 11px;
+    line-height: 27px;
+  }
+
+  .plan-link {
+    font-size: 12px;
+    padding: 8px 18px;
+    position: relative;
+    top: 9px;
+  }
+
+  /* forth container */
+  .forth-container {
+    width: 95%;
+    border-radius: 18px;
+    padding: 4px;
+    flex-direction: column;
+  }
+
+  /* .forth-h-first {
+  display: none;
+  color: white;
+  font-size: 31px;
+} */
+  .mobile-forth-h-first h1 {
+    display: block;
+    /* width: 100%; */
+    font-size: 19px;
+    text-align: center;
+    position: relative;
+    top: 28px;
+  }
+
+
+  /* services container */
+  .services-container {
+    background: #181818;
+    padding: 39% 93% -9px;
+    width: 330px;
+    height: 599px;
+  }
+
+  .services-container h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 7px;
+    left: -5px;
+    z-index: 100;
+    font-weight: 700;
+    color: white;
+}
+
+  .servis-con {
+    position: relative;
+    top: -56px;
+    left: 125px;
+    width: 123px;
+  }
+
+  #graphic {
+    position: relative;
+    top: 177px;
+    left: 63px;
+}
+
+  #motion {
+    position: relative;
+    top: 182px;
+    left: -70px;
+  }
+
+  #ui-ux {
+    position: relative;
+    top: -239px;
+    left: -72px;
+}
+
+  #web-design {
+    position: relative;
+    top: -235px;
+    left: -72px;
+}
+
+#illustration {
+  position: relative;
+  top: -512px;
+  left: 63px;
+}
+
+  #branding {
+    position: relative;
+    top: -363px;
+    left: 64px;
+}
+
+  .service-done {
+    top: -360px;
+    left: -1px;
+    width: 117px;
+    height: 36px;
+    position: relative;
+    font-size: 10px;
+    padding: 9px 13px;
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   .main-heading {
@@ -1194,7 +1390,7 @@ textarea {
     margin-bottom: -19px;
     padding: 136px -20px 39px 51px;
     line-height: 34px;
-}
+  }
 
   .carousal {
     display: none;
@@ -1229,6 +1425,7 @@ textarea {
     text-align: center;
   }
 
+
   .verstality {
     width: 100%;
     padding: 0;
@@ -1257,18 +1454,20 @@ textarea {
     position: relative;
     top: 11px;
     left: -10px;
-}
-.childone {
-  display: flex;
-  color: white;
-  font-size: 14px;
-  margin: 2px 1px;
-  position: relative;
-  left: -18px;
-}
-.carousal-nav{
-  display: none;
-}
+  }
+
+  .childone {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    margin: 2px 1px;
+    position: relative;
+    left: -18px;
+  }
+
+  .carousal-nav {
+    display: none;
+  }
 
 
   .services-container {
@@ -1293,6 +1492,7 @@ textarea {
     top: -150px;
     left: -80px;
   }
+
 
   #ui-ux {
     position: relative;
@@ -1327,6 +1527,7 @@ textarea {
     font-size: 10px;
     padding: 9px 13px;
   }
+
 
   .six-con-heading-sec h1 {
     font-size: 30px;
