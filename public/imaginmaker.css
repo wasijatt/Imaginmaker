@@ -854,16 +854,37 @@ textarea {
 .footer-col {
   width: 20%;
 }
+.footer-col:first-child{
+  flex: 60%;
+}
+.footer-col:first-child p{
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-top: -5px;
+}
+.whatsap{
+  color: #9A9A9A;
 
+}
+.socialmedia {
+  margin-top: -8px;
+}
+.socialmedia a{
+  text-decoration: none;
+}
+.socialmedia a i {
+  font-size:20px;
+  margin-left: 10px;
+}
 .footer-head {
   font-size: 18px;
-  color: white;
+  color: #FFFFFF;
   letter-spacing: 2px;
 }
 
 .footer-links {
   text-decoration: none;
-  color: white;
+  color: #9A9A9A;
   font-size: 15px;
   display: block;
   padding-top: 5px;
