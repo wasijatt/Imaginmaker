@@ -1092,6 +1092,36 @@ bottom: 0;
   color: white;
   position: absolute;
 }
+.us{
+  display: flex;
+  top: 10vh;
+  margin: auto;
+
+}
+.are{
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  font-size:2rem;
+  top: 100px;
+}
+.dis{
+  width: 40%;
+  font-size: 30px;
+  font-weight: 500;
+
+
+}
+.define{
+  margin: auto;
+  text-align: center;
+  top: 50px;
+}
+.definehead{
+  font-size: 60px;
+  
+}
+
 /* first section responsive code with width of 320 to 420 */
 @media screen and (min-width: 320px) and (max-width: 415px) {
   .buton {
