@@ -20,6 +20,9 @@ body {
 .mobile-forth-h-first {
   display: none;
 }
+#mobile-svg-member{
+  display: none;
+}
 
 .whatsapp-nm a {
   cursor: pointer;
@@ -1201,6 +1204,18 @@ textarea {
   .svg-member{
     display: none;
   }
+  .six-con-heading-sec h1 {
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+    left: 46px;
+    font-size: 23px;
+    text-align: center;
+    letter-spacing: 0px;
+}
+#mobile-svg-member p{
+  display: none;
+}
 }
 
  @media screen and (min-width: 415px) and (max-width: 520px) {
