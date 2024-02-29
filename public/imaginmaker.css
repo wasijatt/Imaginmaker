@@ -729,7 +729,8 @@ input {
   font-size: 18px;
   margin-right: 40px;
   margin-top: 30px;
-  font-weight: 600;
+  font-weight: 500;
+  text-align: center;
 }
 
 .ten-con {
@@ -1122,6 +1123,86 @@ bottom: 0;
   
 }
 
+.con-work{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.work{
+  display: flex;
+  width: 100%;
+}
+.con{
+  margin-top: 7%;
+width: 30%;
+}
+.con-para{
+  color: #101010;
+}
+.right{
+  width: 40%;
+}
+.owners{
+  background: #181818;
+  width: 100%;
+  padding: 50px;
+}
+.first{
+  display:flex ;
+  text-align: center;
+}
+
+.pro h1, p{
+  color: #dedddd;
+}
+.first p{
+  font-size: 23px;
+}
+.first h1{
+  font-size: 40px;
+}
+.pro{
+width: 50%;
+margin-top: 3%;
+}
+
+.img img{
+  height: 400px;
+  border-radius: 15px;
+}
+.team h1 {
+  color: #e6e5e5;
+  font-size: 45px;
+  text-align: center;
+}
+.teams-pic{
+  display: flex;
+width: 80%;
+margin: auto;
+margin-bottom: 30px;
+text-align: center;
+justify-content: space-evenly;
+}
+.teams-pic img{
+width: 80%;
+border-radius: 100%;
+}
+.snd-last{
+display: flex;
+padding: 3rem;
+}
+.mess{
+  width: 60%;
+}
+.advice{
+  font-size: 3rem;
+  width: 40%;
+  font-weight: 600;
+  justify-content: center;
+  margin-top: 2%;
+
+
+}
 /* first section responsive code with width of 320 to 420 */
 @media screen and (min-width: 320px) and (max-width: 415px) {
   .buton {
