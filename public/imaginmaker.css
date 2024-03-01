@@ -12,9 +12,9 @@ body {
   position: relative;
 }
 
-#membr-six-conttainer{
+/* #membr-six-container{
   background-color: red;
-}
+} */
 .mobile-main-heading {
   display: none;
 }
@@ -1255,16 +1255,14 @@ padding: 3rem;
     width: 342px;
     height: 684px;
 }
-.services-container h1 {
-  font-size: 30px;
-  text-align: center;
-  margin: auto;
-  position: relative;
-  top: 12px;
-  left: -12px;
-  z-index: 100;
+.six-con-heading-sec h1 {
   font-weight: 700;
-  color: white;
+  position: relative;
+  top: 3px;
+  left: 46px;
+  font-size: 23px;
+  text-align: center;
+  letter-spacing: 0px;
 }
 
 .servis-con {
@@ -1317,8 +1315,11 @@ padding: 3rem;
   font-size: 10px;
   padding: 9px 13px;
 }
-#membr-six-conttainer{
+#membr-six-container{
   background-color: red;
+}
+#mobile-svg-member{
+  display: block;
 }
 
   .svg-member{
