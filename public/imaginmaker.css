@@ -520,6 +520,7 @@ p {
   font-size: 24px;
   margin-top: -30px;
   text-align: center;
+  color: #000;
 }
 
 .six-box {
@@ -553,11 +554,13 @@ p {
 .membership-divs h1 {
   font-weight: 900;
   font-size: 20px;
+  color: #3B4144;
 }
 
 .membership-divs p {
   font-weight: 500;
   font-size: 17px;
+  color: #191919;
 }
 
 .level-svg {
@@ -567,6 +570,12 @@ p {
 .membership-plan {
   width: 33%;
   text-align: left;
+}
+.para-call{
+    color: #191919;
+}
+.second-svg p{
+  color: #191919;
 }
 
 .plans {
@@ -592,11 +601,13 @@ p {
 #mem-plan-p {
   font-size: 15px;
   font-weight: 400;
+  color: #191919;
 }
 
 #mem-price-p {
   font-size: 12px;
   font-weight: 400;
+  color: #191919;
 }
 
 .pkg-head {
@@ -741,6 +752,7 @@ p {
   font-weight: 600;
   font-size: 25px;
   margin-top: -40px;
+  color: #191919;
 }
 
 .form-con {
@@ -795,6 +807,7 @@ textarea {
   font-size: 20;
   font-weight: 700;
   margin-top: -20px;
+  color: #191919;
 }
 
 .eleven-con {
