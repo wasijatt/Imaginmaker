@@ -1,8 +1,7 @@
 
 // main sliders
-
 const slider = document.querySelector('.carousel-track');
-const navigation = document.querySelector('.navigation');
+const navigation = $document.querySelector('.navigation')
 const slides = document.querySelectorAll('.carousel-slide');
 const numSlides = slides.length;
 let currentIndex = 1;
@@ -41,41 +40,6 @@ function stopAutoLoop() {
 startAutoLoop();
 navigation.addEventListener('mouseenter', stopAutoLoop);
 navigation.addEventListener('mouseleave', startAutoLoop);
-
-
-// clien reviews slider
-const reviewS = document.querySelector("slider");
-const reviewSlide = document.querySelectorAll("slide");
-const nmbrofSlides = reviewSlide.length 
- let ReviewcurrentIndex=  1
- let   Reviewindex = ReviewcurrentIndex ;
- reviewS.style.transform = `translateX(-${Reviewindex * 394}px)`;
- function nextreview(){
-  Reviewindex  = (Reviewindex +1) % nmbrofSlides
-  updateReview();
-
- }
- function prevreview(){
-   Reviewindex = ((Reviewindex -1 + nmbrofSlides) % nmbrofSlides)
-  updateReview();
-  
- }
-function updateReview(){
-  reviewS.style.transform = `translateX(-${Reviewindex * 394}px)`;
-}
-let ReviewId;
-let reviewDuration = 3000;
-function startreviewLoop(){
-ReviewId = setInterval(() => {
-  nextreview();
-}, reviewDuration);
-}
-function stopReviewLoop() {
-  clearInterval(ReviewId);
-}
-startreviewLoop();
-reviewS.addEventListener('mouseenter', startreviewLoop);
-reviewS.addEventListener('mouseleave', stopReviewLoop);
 
 
 
@@ -171,18 +135,7 @@ function submitForm() {
   });
 }
 
-// function clearForm(form) {
-//   // Set input values to an empty string
-//   const inputs = form.querySelectorAll('input, textarea');
-//   inputs.forEach(input => {
-//       input.value = '';
-//   });
 
-  // Reset the form's innerHTML
-  // form.innerHTML = form.innerHTML;
-// }
-
-// input phone Number
 function Phonenmbrformat(input) {
   var Phonenmbr = input.value.replace(/\D/g, '');
   if (Phonenmbr.length === 11) {
@@ -193,17 +146,7 @@ function Phonenmbrformat(input) {
   input.value = Phonenmbr;
 }
 
-// function phonenmbrformat(input) {
-//   var phonenmbr = input.value.replace('/\D/g', '');
-//   if (phonenmbr.length === 11) {
-//     phonenmbr = phonenmbr.replace('/(\d{4})(\d{7})/', '$1-$2');
-//   } else if (phonenmbr.length > 11) {
-//     phonenmbr = phonenmbr.slice(0, 11);
-//   };
-//   input.value = phonenmbr
-// }
 
-// faq jawa
 var faq = document.getElementsByClassName('faq-head');
 var i;
 for (i = 0; i < faq.length; i++) {
