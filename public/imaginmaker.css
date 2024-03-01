@@ -719,6 +719,12 @@ p {
   font-weight: 900;
   color: #7700ff;
 }
+.formpopup{
+  position: relative;
+  width: 100%;
+  display: flex;
+  background: #d5d4d485;
+}
 
 .form-head {
   font-weight: 700;
