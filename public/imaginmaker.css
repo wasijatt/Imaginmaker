@@ -398,7 +398,10 @@ p {
 #carisal-nav {
   margin: 15px 0px;
   width: 80%;
-  /* opacity: .5; */
+}
+.carousal-nav:hover{
+  background: #000;
+  transition: .5 ease-in-out;
 }
 
 .carousal-nav a {

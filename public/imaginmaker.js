@@ -1,6 +1,5 @@
 
 // main sliders
-
 $(document).ready(function() {
   const $slider = $('.carousel-track');
   const $navigation = $('.navigation');
@@ -24,7 +23,7 @@ $(document).ready(function() {
     $slider.css('transform', `translateX(-${index * 23}%)`);
   }
 
-  const intervalDuration = 2000;
+  const intervalDuration = 3000;
   let intervalId;
 
   function startAutoLoop() {
@@ -42,150 +41,135 @@ $(document).ready(function() {
   
   $('.next').click(nextSlide);
   $('.prev').click(prevSlide);
-});
-// const slider = document.querySelector('.carousel-track');
-// const navigation = document.querySelector('.navigation');
-// const slides = document.querySelectorAll('.carousel-slide');
-// const numSlides = slides.length;
-// let currentIndex = 1;
-
-// let index = currentIndex;
-
-// slider.style.transform = `translateX(-${index * 23}%)`;
-
-// function nextSlide() {
-//   index = (index + 1) % numSlides;
-//   updateSlider();
-// }
-
-// function prevSlide() {
-//   index = (index - 1 + numSlides) % numSlides;
-//   updateSlider();
-// }
-
-// function updateSlider() {
-//   slider.style.transform = `translateX(-${index * 23}%)`;
-// }
-// const intervalDuration = 3000; 
-// let intervalId;
-
-// function startAutoLoop() {
-//   intervalId = setInterval(() => {
-//     nextSlide();
-//   }, intervalDuration);
-// }
-
-// function stopAutoLoop() {
-//   clearInterval(intervalId);
-// }
 
 
-// startAutoLoop();
-// navigation.addEventListener('mouseenter', stopAutoLoop);
-// navigation.addEventListener('mouseleave', startAutoLoop);
 
 
-// clien reviews slider
-const reviewS = document.querySelector("slider");
-const reviewSlide = document.querySelectorAll("slide");
-const nmbrofSlides = reviewSlide.length 
- let ReviewcurrentIndex=  1
- let   Reviewindex = ReviewcurrentIndex ;
- reviewS.style.transform = `translateX(-${Reviewindex * 394}px)`;
- function nextreview(){
-  Reviewindex  = (Reviewindex +1) % nmbrofSlides
-  updateReview();
+  // cursor animation
+  var $cursor = $(".cursor");
+  $(document).on("mousemove", function(e) {
+    var x = e.pageX - window.scrollX;
+    var y = e.pageY - window.scrollY;
+    $cursor.css("top", y + "px");
+    $cursor.css("left", x + "px");
+  });
 
- }
- function prevreview(){
-   Reviewindex = ((Reviewindex -1 + nmbrofSlides) % nmbrofSlides)
-  updateReview();
+  var $elements = $('.hover');
+  var $whitecursor = $('.white-cursor');
   
- }
-function updateReview(){
-  reviewS.style.transform = `translateX(-${Reviewindex * 394}px)`;
-}
-let ReviewId;
-let reviewDuration = 3000;
-function startreviewLoop(){
-ReviewId = setInterval(() => {
-  nextreview();
-}, reviewDuration);
-}
-function stopReviewLoop() {
-  clearInterval(ReviewId);
-}
-startreviewLoop();
-reviewS.addEventListener('mouseenter', startreviewLoop);
-reviewS.addEventListener('mouseleave', stopReviewLoop);
+  $elements.on('mouseenter', handleMouseOver);
+  $elements.on('mouseout', handleMouseOut);
+
+  $whitecursor.on('mouseenter', whitemouseover);
+  $whitecursor.on('mouseleave', whitemouseleave);
+
+  function whitemouseover() {
+    $cursor.css("background-color", "#00000077");
+    $cursor.css("width", "60px");
+    $cursor.css("height", "60px");
+    // cursor.css("transform", "translate(-50%, -50%)");
+  }
+
+  function whitemouseleave() {
+    $cursor.css("background-color", "#7700ff");
+    $cursor.css("width", "10px");
+    $cursor.css("height", "10px");
+  }
+
+  function handleMouseOver() {
+    $cursor.css("width", "60px");
+    $cursor.css("height", "60px");
+    // cursor.css("transform", "translate(-50%, -50%)");
+  }
+
+  function handleMouseOut() {
+    $cursor.css("width", "10px");
+    $cursor.css("height", "10px");
+  }
+
+
+  // project counter
+  const projectTarget = 150;
+  const $projectCounter = $('.project-counter');
+  
+  function updateCounter($projectCounter, count) {
+    $projectCounter.text(count);
+  }
+  
+  function startCounter() {
+    $projectCounter.each(function(index) {
+      let count = 1;
+      const interval = setInterval(() => {
+        updateCounter($(this), count);
+        if (count === projectTarget) {
+          clearInterval(interval);
+        } else {
+          count++;
+        }
+      }, 20 * (index + 1));
+    });
+  }
+
+  startCounter();
 
 
 
-// mouseevents
-var cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", (e) => {
-  let x = e.pageX - window.scrollX;
-  let y = e.pageY - window.scrollY;
-  cursor.style.top = y + "px";
-  cursor.style.left = x + "px";
-})
-const elements = document.querySelectorAll('.hover');
-const whitecursor = document.querySelectorAll('.white-cursor')
-// Add an event listener to each element
-elements.forEach(element => {
-  element.addEventListener('mouseenter', handleMouseOver);
-  element.addEventListener('mouseout', handleMouseOut);
+  // client revieew
+
+  const $reviewS = $("slider");
+  const $reviewSlide = $("slide");
+  const nmbrofSlides = $reviewSlide.length;
+  let ReviewcurrentIndex = 1;
+  let Reviewindex = ReviewcurrentIndex;
+  $reviewS.css("transform", `translateX(-${Reviewindex * 394}px)`);
+
+  function nextreview() {
+    Reviewindex = (Reviewindex + 1) % nmbrofSlides;
+    updateReview();
+  }
+
+  function prevreview() {
+    Reviewindex = ((Reviewindex - 1 + nmbrofSlides) % nmbrofSlides);
+    updateReview();
+  }
+
+  function updateReview() {
+    $reviewS.css("transform", `translateX(-${Reviewindex * 394}px)`);
+  }
+
+  let ReviewId;
+  let reviewDuration = 3000;
+
+  function startreviewLoop() {
+    ReviewId = setInterval(() => {
+      nextreview();
+    }, reviewDuration);
+  }
+
+  function stopReviewLoop() {
+    clearInterval(ReviewId);
+  }
+
+  startreviewLoop();
+
+  $reviewS.on('mouseenter', startreviewLoop);
+  $reviewS.on('mouseleave', stopReviewLoop);
+
+// .carousal-nav hover
+  $(".carousal-nav").on("mouseover", mousein);
+  $(".carousal-nav").on("mouseout", mouseOut);
+
+  function mousein() {
+    $(".carousal-nav").css("backgrounColor", "black");
+    $(".carousal-nav").css("transition", "2s ease-in-out");
+  }
+
+  function mouseOut() {
+    $(".carousal-nav").css("transition", ".5s ease-out");
+  }
 });
-whitecursor.forEach(element => {
-  element.addEventListener('mouseenter', whitemouseover)
-  element.addEventListener('mouseleave', whitemouseleave)
-})
-function whitemouseover() {
-  cursor.style.backgroundColor = '#00000077'
-  cursor.style.width = '60px'
-  cursor.style.height = '60px'
-  // cursor.style.transform = "translate(-50% , -50%)"
-}
-function whitemouseleave() {
-  cursor.style.backgroundColor = '#7700ff'
-  cursor.style.width = '10px'
-  cursor.style.height = '10px'
-}
-function handleMouseOver() {
-  cursor.style.width = '60px'
-  cursor.style.height = '60px'
-  // cursor.style.transform = "translate(-50% , -50%)"
-
-}
-function handleMouseOut() {
-  cursor.style.width = '10px'
-  cursor.style.height = '10px'
-}
 
 
-// counters for Projects
-const projectTarget = 150
-const projectCounter = document.querySelectorAll('.project-counter');
-function updateCounter(projectCounter,count) {
-  projectCounter.textContent = count
-}
-// startCounter
-function startCounter() {
-  projectCounter.forEach((projectCounter, index) => {
-  let count = 1
-  const interval = setInterval(() => {
-    updateCounter(projectCounter,count);
-    if (count === projectTarget) {
-      clearInterval(interval);
-    }
-    else {
-      count++
-    }
-  }, 20 * (index + 1))
-})}
-window.onload = startCounter();
-
-// for submition form
 // frontend.js
 function submitForm() {
   const form = document.getElementsByClassName('main-form')[0];
@@ -210,28 +194,20 @@ function submitForm() {
   })
   .catch(error => {
       console.error('Error:', error);
+
+
+
+      // faq jawa
+      $('.faq-head').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).next().toggle('slow');
+      });
   });
 }
 
 
 
-// faq jawa
-var faq = document.getElementsByClassName('faq-head');
-var i;
-for (i = 0; i < faq.length; i++) {
-  faq[i].addEventListener('click', function () {
-    this.classList.toggle('active')
-    var para = this.nextElementSibling;
-    if (para.style.display === 'block') {
-      para.style.display = 'none'
-    } else {
-      para.style.display = 'block'
-      para.style.transition = "1s ease"
 
-    }
-  });
-
-}
 
 // tab for casestudy page
 
@@ -250,18 +226,6 @@ function opentab(evt,tabname){
 }
 
 
-
-document.getElementById("carisal-nav").addEventListener("mouseover", mousein);
-document.getElementById("carisal-nav").addEventListener("mouseout", mouseOut);
-function mousein(){
-  document.getElementById("carisal-nav").style.color = "red";
-  document.getElementById("carisal-nav").style.transition = ".5s ease-out";
-
-}
-function mouseOut() {
-
-  document.getElementById("carisal-nav").style.transition = ".5s ease-out";
-}
 
 
 
