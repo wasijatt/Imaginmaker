@@ -167,6 +167,30 @@ $(document).ready(function() {
   function mouseOut() {
     $(".carousal-nav").css("transition", ".5s ease-out");
   }
+
+
+  // faq 
+  $('.faq-head').on('click', function() {
+   $('.faq-head').removeClass('active');
+   $('.para').hide();
+   $(this).addClass('active');
+   var $toggleIcon = $(this).find('.toggle-icon');
+   $toggleIcon.text($toggleIcon.text() == '+' ? '-' : '+');
+  //  $(this).next('.para').slideToggle('slow');
+   $(this).next('.para').show("slow");
+  });
+
+// tabs content 
+$('.tab-head').on('click', function() {
+  var tabname = $(this).attr('data-tabname');
+  $('.tab-content').hide();
+  $('.tab-head').removeClass('active');
+  $('#' + tabname).show();
+  $(this).addClass('active');
+});
+
+
+
 });
 
 
@@ -198,10 +222,7 @@ function submitForm() {
 
 
       // faq jawa
-      $('.faq-head').on('click', function() {
-        $(this).toggleClass('active');
-        $(this).next().toggle('slow');
-      });
+      
   });
 }
 
@@ -211,19 +232,19 @@ function submitForm() {
 
 // tab for casestudy page
 
-function opentab(evt,tabname){
-  var i ,tabhead,tabcontent;
-  tabcontent = document.getElementsByClassName("tab-content");
-  for ( i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none"
-  }
-  tabhead = document.getElementsByClassName("tab-head");
-  for (  i= 0;  i< tabhead.length; i++) {
-  tabhead[i].className = tabhead[i].className.replace(" active" ," ")  
-  }
-  document.getElementById(tabname).style.display = "block"
-  evt.currentTarget.className += " active";
-}
+// function opentab(evt,tabname){
+//   var i ,tabhead,tabcontent;
+//   tabcontent = document.getElementsByClassName("tab-content");
+//   for ( i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none"
+//   }
+//   tabhead = document.getElementsByClassName("tab-head");
+//   for (  i= 0;  i< tabhead.length; i++) {
+//   tabhead[i].className = tabhead[i].className.replace(" active" ," ")  
+//   }
+//   document.getElementById(tabname).style.display = "block"
+//   evt.currentTarget.className += " active";
+// }
 
 
 

@@ -55,7 +55,7 @@ app.post('/', (req, res) => {
     .save()
     .then(() => {
       console.log('Data saved successfully');
-      res.send('This item has been saved to the database');
+      res.sendFile(path.join(__dirname, 'public', 'popup.html'));
     })
     .catch((error) => {
       console.error('Error saving data to database:', error);
@@ -63,7 +63,7 @@ app.post('/', (req, res) => {
     });
 });
 
-app.listen(8080);
+app.listen(3000);
 module.exports = app;
 
 
