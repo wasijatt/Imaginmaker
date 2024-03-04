@@ -728,9 +728,8 @@ p {
 .formpopup {
   position: fixed;
   width: 100%;
-  background: #00000085;
+  background: #9a999988;
   height: 100vh;
-
   z-index: 1000;
   transition: 2s ease;
 }
@@ -739,13 +738,15 @@ p {
   width: 30%;
   display: flex;
   flex-direction: column;
-  background: #f8f8f8;
-  border-radius: 50px;
+  background: #F8F8F8;
+  border-radius: 20px;
   margin: auto;
+  margin-top: 10%;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px;
+  font-family: grifter;
 }
 .conf-h {
   font-size: 43px;
@@ -753,6 +754,7 @@ p {
 .conf-p{
   color:black;
   font-size: 26px;
+  font-family: SF UI display;
 
 }
 .mail {
@@ -835,7 +837,7 @@ textarea {
 .faq-head {
   display: inline-block;
   font-size: 18px;
-  /* background: #c8c7c7; */
+  cursor: pointer;
   width: 100%;
   padding: 14px 12px;
 }
@@ -1331,6 +1333,7 @@ p {
     top: -75px;
     left: -67px;
   }
+<<<<<<< HEAD
 #illustration {
   position: relative;
   top: -371px;
@@ -1341,6 +1344,8 @@ p {
   top: -512px;
   left: -71px;
 }
+=======
+>>>>>>> 2c085e975c1f203de2057313bc9f84f23a14ccb3
 
   #illustration {
     position: relative;
@@ -1384,7 +1389,11 @@ p {
   #mobile-svg-member p {
     display: none;
   }
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 2c085e975c1f203de2057313bc9f84f23a14ccb3
 
 @media screen and (min-width: 415px) and (max-width: 520px) {
   /* same css  */
@@ -1795,5 +1804,8 @@ p {
   .eight-two {
     width: 30%;
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 2c085e975c1f203de2057313bc9f84f23a14ccb3
 }
